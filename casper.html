@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Document</title>
+    <style>
+      #container {
+        width: 400px;
+        height: 200px;
+        position: relative;
+        overflow: auto;
+      }
+
+      #record {
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        z-index: 1;
+      }
+
+      #sleeve {
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        z-index: 10;
+      }
+      ​
+      /* cover {
+        transition: 0.4s ease-in-out;
+        transform: scale(1.25) translate(22%);
+      } */
+      #record {
+        -webkit-transition: left 0.5s ease-out;
+        -moz-transition: left 0.5s ease-out;
+        -ms-transition: left 0.5s ease-out;
+        -o-transition: left 0.5s ease-out;
+        transition: left 0.5s ease-out;
+      }
+
+      #container:hover #record {
+        left: 100px; /* This is assuming you want it to slide from left-to-right */
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <img src="vinyl.png" width="200" height="200" id="record" />
+      <img src="nirvana.jpg" width="200" height="200" id="sleeve" />
+    </div>
+    <script>
+              $('#container').hover(function() {
+          var record = $('img:eq(0)', this);
+          record.stop(1,0).animate({
+              left: '200px'
+          }, 1000, function() {
+              record.css('z-index', 11).stop(1, 0).animate({
+                  left: '0px'
+              }, 1000);
+          });
+      }, function() {
+          var record = $('img:eq(0)', this);
+          record.stop(1,0).animate({
+              left: '200px'
+          }, 1000, function() {
+              record.css('z-index', 1).stop(1, 0).animate({
+                  left: '0px'
+              }, 1000);
+          });
+      });​
+    </script>
+  </body>
+</html>
