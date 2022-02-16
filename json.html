@@ -243,7 +243,7 @@
     <script>
       const header = document.querySelector("header h1");
       const myHeaders = {
-        "x-apikey": "600ec2fb1346a1524ff12de4",
+        "x-apikey": "7ce052b7747b738e3f547ac9e68da594ba2b3",
       };
 
       document.addEventListener("DOMContentLoaded", start);
@@ -264,7 +264,7 @@
       async function loadJSON() {
         console.log("tekst");
         const JSONdata = await fetch(
-          "https://babushka-dd8a.restdb.io/rest/menu",
+          "https://pladepusheren-6cfc.restdb.io/rest/kategori",
           { headers: myHeaders }
         );
         retter = await JSONdata.json();
