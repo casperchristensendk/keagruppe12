@@ -264,12 +264,15 @@
       async function loadJSON() {
         console.log("tekst");
         const JSONdata = await fetch(
-          "https://pladepusheren-6cfc.restdb.io/rest/kategori",
+          "Access-Control-Allow-Origin: https://pladepusheren-6cfc.restdb.io/rest/kategori",
           { headers: myHeaders }
         );
         retter = await JSONdata.json();
         console.log("Retter", retter);
         visRetter();
+      }
+      function vis(json) {
+        console.log(json);
       }
 
       const dest = document.querySelector("#liste");
@@ -284,7 +287,7 @@
             klon.querySelector(".navn").textContent = ret.navn;
 
             klon.querySelector(".profil-billede").src =
-              "medium/" + ret.billednavn + "-md.jpg";
+              "medium/" + ret.billednavn + ".jpg";
             klon.querySelector("p").textContent = ret.kortbeskrivelse;
             klon.querySelector(".pris").textContent = ret.pris + ",-";
             klon
@@ -304,7 +307,7 @@
         console.log(ret);
         modal.querySelector("h2").textContent = ret.navn;
         modal.querySelector(".profil-billede").src =
-          "medium/" + ret.billednavn + "-md.jpg";
+          "medium/" + ret.billednavn + ".jpg";
         modal.querySelector("p").textContent = ret.langbeskrivelse;
 
         modal.style.display = "block";
