@@ -198,19 +198,19 @@
     <div class="logo">
       <img src="medium/logotilbistroooooo.jpg" alt="logo" />
     </div>
-    <h1>Bistro Babushka</h1>
+    <h1>Pladepusheren</h1>
 
-    <h2>Delight in every bite</h2>
+    <h2>tagline her</h2>
     <button class="toggle-btn">Menu</button>
 
     <nav>
       <div class="container">
         <div class="center">
           <button data-kategori="alle" class="valgt">Alle</button>
-          <button data-kategori="forretter">Forretter</button>
-          <button data-kategori="hovedretter">Hovederetter</button>
-          <button data-kategori="desserter">Desserter</button>
-          <button data-kategori="drikkevarer">Drikkevarer</button>
+          <button data-kategori="forretter">POP</button>
+          <button data-kategori="hovedretter">HIP HOP</button>
+          <button data-kategori="desserter">ELEKTRONISK</button>
+          <button data-kategori="drikkevarer">SOUL / FUNK / DISCO</button>
         </div>
       </div>
     </nav>
@@ -237,10 +237,10 @@
       </template>
     </section>
     <footer>
-      Adresse: Grønnegade 97 1234 København K Åbningstider: Mandag - Fredag
+      Adresse: Guldbergsgade 97 1234 København K Åbningstider: Mandag - Fredag
       10.30-22 Lørdag 12-00 - 23.00
     </footer>
-    <script>
+    <!-- <script>
       const header = document.querySelector("header h1");
       const myHeaders = {
         "x-apikey": "7ce052b7747b738e3f547ac9e68da594ba2b3",
@@ -284,7 +284,7 @@
             klon.querySelector(".navn").textContent = ret.navn;
 
             klon.querySelector(".profil-billede").src =
-              "medium/" + ret.billednavn + "-md.jpg";
+              "medium/" + ret.billednavn + ".jpg";
             klon.querySelector("p").textContent = ret.kortbeskrivelse;
             klon.querySelector(".pris").textContent = ret.pris + ",-";
             klon
@@ -304,7 +304,7 @@
         console.log(ret);
         modal.querySelector("h2").textContent = ret.navn;
         modal.querySelector(".profil-billede").src =
-          "medium/" + ret.billednavn + "-md.jpg";
+          "medium/" + ret.billednavn + ".jpg";
         modal.querySelector("p").textContent = ret.langbeskrivelse;
 
         modal.style.display = "block";
@@ -330,6 +330,6 @@
           // knapper.classList.remove("open");
         }
       }
-    </script>
+    </script> -->
   </body>
 </html>
