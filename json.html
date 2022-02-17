@@ -251,25 +251,25 @@
       10.30-22 Lørdag 12-00 - 23.00
     </footer>
     <script>
-      // const header = document.querySelector("header h1");
-      // const myHeaders = {
-      //   "x-apikey": "7ce052b7747b738e3f547ac9e68da594ba2b3",
-      // };
+      const header = document.querySelector("header h1");
+      const myHeaders = {
+        "x-apikey": "7ce052b7747b738e3f547ac9e68da594ba2b3",
+      };
 
-      // document.addEventListener("DOMContentLoaded", start);
-      // let retter;
-      // let filter = "alle";
-      // function start() {
-      //   const filterknapper = document.querySelectorAll("nav button");
-      //   filterknapper.forEach((knap) =>
-      //     knap.addEventListener("click", filtrerRetter)
-      //   );
-      //   loadJSON();
-      // }
-      // function filtrerRetter() {
-      //   filter = this.dataset.kategori;
-      //   visRetter();
-      // }
+      document.addEventListener("DOMContentLoaded", start);
+      let retter;
+      let filter = "alle";
+      function start() {
+        const filterknapper = document.querySelectorAll("nav button");
+        filterknapper.forEach((knap) =>
+          knap.addEventListener("click", filtrerRetter)
+        );
+        loadJSON();
+      }
+      function filtrerRetter() {
+        filter = this.dataset.kategori;
+        visRetter();
+      }
 
       async function loadJSON() {
         console.log("tekst");
@@ -285,33 +285,33 @@
         console.log(json);
       }
 
-      // const dest = document.querySelector("#liste");
-      // const skabelon = document.querySelector("template").content;
+      const dest = document.querySelector("#liste");
+      const skabelon = document.querySelector("template").content;
 
-      // function visRetter() {
-      //   dest.textContent = "";
-      //   retter.forEach((ret) => {
-      //     console.log("kategori", ret.kategori);
-      //     if (filter == ret.kategori || filter == "alle") {
-      //       const klon = skabelon.cloneNode(true);
-      //       klon.querySelector(".navn").textContent = ret.navn;
+      function visRetter() {
+        dest.textContent = "";
+        retter.forEach((ret) => {
+          console.log("kategori", ret.kategori);
+          if (filter == ret.kategori || filter == "alle") {
+            const klon = skabelon.cloneNode(true);
+            klon.querySelector(".navn").textContent = ret.navn;
 
-      klon.querySelector(".profil-billede").src =
-        "medium/" + ret.billednavn + ".jpg";
-      klon.querySelector("p").textContent = ret.kortbeskrivelse;
-      klon.querySelector(".pris").textContent = ret.pris + ",-";
-      klon
-        .querySelector("article")
-        .addEventListener("click", () => visDetaljer(ret));
-      dest.appendChild(klon);
-      //     }
-      //   });
-      // }
+            klon.querySelector(".profil-billede").src =
+              "medium/" + ret.billednavn + ".jpg";
+            klon.querySelector("p").textContent = ret.kortbeskrivelse;
+            klon.querySelector(".pris").textContent = ret.pris + ",-";
+            klon
+              .querySelector("article")
+              .addEventListener("click", () => visDetaljer(ret));
+            dest.appendChild(klon);
+          }
+        });
+      }
 
-      // // Modal
+      // Modal
 
-      // const container = document.querySelector("section");
-      // const modal = document.querySelector("#modal");
+      const container = document.querySelector("section");
+      const modal = document.querySelector("#modal");
 
       function visDetaljer(ret) {
         console.log(ret);
@@ -320,28 +320,27 @@
           "medium/" + ret.billednavn + ".jpg";
         modal.querySelector("p").textContent = ret.langbeskrivelse;
 
-        //   modal.style.display = "block";
-        // }
+        modal.style.display = "block";
+      }
 
-        // modal.addEventListener("click", () => (modal.style.display = "none"));
+      modal.addEventListener("click", () => (modal.style.display = "none"));
 
-        const knapper = document.querySelector("button");
-        const nav = document.querySelector("nav");
+      const knapper = document.querySelector("button");
+      const nav = document.querySelector("nav");
 
-        knapper.addEventListener("click", toggleMenu);
+      knapper.addEventListener("click", toggleMenu);
 
-        function toggleMenu() {
-          nav.classList.toggle("shown");
+      function toggleMenu() {
+        nav.classList.toggle("shown");
 
-          const menuShown = nav.classList.contains("shown");
+        const menuShown = nav.classList.contains("shown");
 
-          if (menuShown) {
-            knapper.textContent = "Luk";
-            // knapper.classList.add("open");
-          } else {
-            knapper.textContent = "Menu";
-            // knapper.classList.remove("open");
-          }
+        if (menuShown) {
+          knapper.textContent = "Luk";
+          knapper.classList.add("open");
+        } else {
+          knapper.textContent = "Menu";
+          knapper.classList.remove("open");
         }
       }
     </script>
