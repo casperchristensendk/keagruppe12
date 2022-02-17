@@ -12,14 +12,25 @@
       href="https://fonts.googleapis.com/css2?family=Notable&display=swap"
       rel="stylesheet"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap"
+      rel="stylesheet"
+    />
     <!-- favikon -->
+    <link rel="icon" type="image/svg+xml" href="/medium/favikontema7.svg" />
     <title>Pladepusheren</title>
     <style>
       body {
-        background-color: rgb(255, 255, 255);
         padding: 2rem;
       }
-
+      /* burgermenu */
+      .toggle-btn {
+        display: none;
+        flex-direction: row;
+        font-family: "Didact Gothic", sans-serif;
+      }
       section {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
@@ -46,13 +57,14 @@
         transform: translate(-50%, -50%);
       }
       header h1 {
-        font-family: "Notable", sans-serif;
+        font-family: "Didact Gothic", sans-serif;
         color: black;
         text-align: center;
         font-size: 4rem;
       }
       header h2 {
-        color: rgb(165, 142, 142);
+        font-family: "Didact Gothic", sans-serif;
+        color: black;
         text-align: center;
         font-size: 2rem;
       }
@@ -66,7 +78,10 @@
       }
 
       button:hover {
-        background-color: rgb(165, 142, 142);
+        background-color: grey;
+      }
+      p {
+        font-family: "Didact Gothic", sans-serif;
       }
 
       @media (min-width: 150px) {
@@ -87,13 +102,13 @@
           position: fixed;
           top: 0;
           left: 0;
-          background-color: rgb(243, 243, 243);
+          /* background-color: rgb(243, 243, 243); */
         }
 
         #modal article {
           max-width: 900px;
           margin: 2rem;
-          background-color: rgb(243, 243, 243);
+          /* background-color: rgb(243, 243, 243); */
         }
 
         #modal p {
@@ -115,12 +130,7 @@
           margin-top: 5rem;
         }
       }
-      /* burgermenu */
-      .toggle-btn {
-        display: none;
-        flex-direction: row;
-        font-family: "Notable", sans-serif;
-      }
+
       /* knapperne når de er i mobil */
       @media (max-width: 650px) {
         .toggle-btn {
@@ -161,11 +171,11 @@
         }
 
         button:hover {
-          background-color: rgb(226, 199, 199);
+          background-color: grey;
         }
         header h1 {
           display: flex;
-          font-family: "Notable", sans-serif;
+          font-family: "Didact Gothic", sans-serif;
           color: black;
           text-align: center;
           font-size: 3rem;
@@ -198,19 +208,19 @@
     <div class="logo">
       <img src="medium/logotilbistroooooo.jpg" alt="logo" />
     </div>
-    <h1>Bistro Babushka</h1>
+    <h1>Pladepusheren</h1>
 
-    <h2>Delight in every bite</h2>
+    <h2>tagline her</h2>
     <button class="toggle-btn">Menu</button>
 
     <nav>
       <div class="container">
         <div class="center">
           <button data-kategori="alle" class="valgt">Alle</button>
-          <button data-kategori="forretter">Forretter</button>
-          <button data-kategori="hovedretter">Hovederetter</button>
-          <button data-kategori="desserter">Desserter</button>
-          <button data-kategori="drikkevarer">Drikkevarer</button>
+          <button data-kategori="forretter">Pop</button>
+          <button data-kategori="hovedretter">Hip Hop</button>
+          <button data-kategori="desserter">Elektronisk</button>
+          <button data-kategori="drikkevarer">Soul/Funk/Disco</button>
         </div>
       </div>
     </nav>
@@ -237,29 +247,29 @@
       </template>
     </section>
     <footer>
-      Adresse: Grønnegade 97 1234 København K Åbningstider: Mandag - Fredag
+      Adresse: Guldbergsgade 97 1234 København K Åbningstider: Mandag - Fredag
       10.30-22 Lørdag 12-00 - 23.00
     </footer>
     <script>
-      const header = document.querySelector("header h1");
-      const myHeaders = {
-        "x-apikey": "7ce052b7747b738e3f547ac9e68da594ba2b3",
-      };
+      // const header = document.querySelector("header h1");
+      // const myHeaders = {
+      //   "x-apikey": "7ce052b7747b738e3f547ac9e68da594ba2b3",
+      // };
 
-      document.addEventListener("DOMContentLoaded", start);
-      let retter;
-      let filter = "alle";
-      function start() {
-        const filterknapper = document.querySelectorAll("nav button");
-        filterknapper.forEach((knap) =>
-          knap.addEventListener("click", filtrerRetter)
-        );
-        loadJSON();
-      }
-      function filtrerRetter() {
-        filter = this.dataset.kategori;
-        visRetter();
-      }
+      // document.addEventListener("DOMContentLoaded", start);
+      // let retter;
+      // let filter = "alle";
+      // function start() {
+      //   const filterknapper = document.querySelectorAll("nav button");
+      //   filterknapper.forEach((knap) =>
+      //     knap.addEventListener("click", filtrerRetter)
+      //   );
+      //   loadJSON();
+      // }
+      // function filtrerRetter() {
+      //   filter = this.dataset.kategori;
+      //   visRetter();
+      // }
 
       async function loadJSON() {
         console.log("tekst");
@@ -275,33 +285,33 @@
         console.log(json);
       }
 
-      const dest = document.querySelector("#liste");
-      const skabelon = document.querySelector("template").content;
+      // const dest = document.querySelector("#liste");
+      // const skabelon = document.querySelector("template").content;
 
-      function visRetter() {
-        dest.textContent = "";
-        retter.forEach((ret) => {
-          console.log("kategori", ret.kategori);
-          if (filter == ret.kategori || filter == "alle") {
-            const klon = skabelon.cloneNode(true);
-            klon.querySelector(".navn").textContent = ret.navn;
+      // function visRetter() {
+      //   dest.textContent = "";
+      //   retter.forEach((ret) => {
+      //     console.log("kategori", ret.kategori);
+      //     if (filter == ret.kategori || filter == "alle") {
+      //       const klon = skabelon.cloneNode(true);
+      //       klon.querySelector(".navn").textContent = ret.navn;
 
-            klon.querySelector(".profil-billede").src =
-              "medium/" + ret.billednavn + ".jpg";
-            klon.querySelector("p").textContent = ret.kortbeskrivelse;
-            klon.querySelector(".pris").textContent = ret.pris + ",-";
-            klon
-              .querySelector("article")
-              .addEventListener("click", () => visDetaljer(ret));
-            dest.appendChild(klon);
-          }
-        });
-      }
+      klon.querySelector(".profil-billede").src =
+        "medium/" + ret.billednavn + ".jpg";
+      klon.querySelector("p").textContent = ret.kortbeskrivelse;
+      klon.querySelector(".pris").textContent = ret.pris + ",-";
+      klon
+        .querySelector("article")
+        .addEventListener("click", () => visDetaljer(ret));
+      dest.appendChild(klon);
+      //     }
+      //   });
+      // }
 
-      // Modal
+      // // Modal
 
-      const container = document.querySelector("section");
-      const modal = document.querySelector("#modal");
+      // const container = document.querySelector("section");
+      // const modal = document.querySelector("#modal");
 
       function visDetaljer(ret) {
         console.log(ret);
@@ -310,27 +320,28 @@
           "medium/" + ret.billednavn + ".jpg";
         modal.querySelector("p").textContent = ret.langbeskrivelse;
 
-        modal.style.display = "block";
-      }
+        //   modal.style.display = "block";
+        // }
 
-      modal.addEventListener("click", () => (modal.style.display = "none"));
+        // modal.addEventListener("click", () => (modal.style.display = "none"));
 
-      const knapper = document.querySelector("button");
-      const nav = document.querySelector("nav");
+        const knapper = document.querySelector("button");
+        const nav = document.querySelector("nav");
 
-      knapper.addEventListener("click", toggleMenu);
+        knapper.addEventListener("click", toggleMenu);
 
-      function toggleMenu() {
-        nav.classList.toggle("shown");
+        function toggleMenu() {
+          nav.classList.toggle("shown");
 
-        const menuShown = nav.classList.contains("shown");
+          const menuShown = nav.classList.contains("shown");
 
-        if (menuShown) {
-          knapper.textContent = "Luk";
-          // knapper.classList.add("open");
-        } else {
-          knapper.textContent = "Menu";
-          // knapper.classList.remove("open");
+          if (menuShown) {
+            knapper.textContent = "Luk";
+            // knapper.classList.add("open");
+          } else {
+            knapper.textContent = "Menu";
+            // knapper.classList.remove("open");
+          }
         }
       }
     </script>
