@@ -22,9 +22,9 @@
     <!-- <link rel="icon" type="image/svg+xml" href="/medium/favikontema7.svg" /> -->
     <title>Pladepusheren</title>
     <style>
-      body {
+      /* body {
         padding: 2rem;
-      }
+      } */
       /* burgermenu */
       .toggle-btn {
         display: none;
@@ -33,16 +33,19 @@
       }
       section {
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(3, 1fr);
-        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        /* grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); */
+        grid-column-gap: 2px solid black;
+        grid-row-gap: 2px solid black;
+        overflow: hidden;
       }
       img {
-        max-width: 100%;
-        max-height: 200px;
-        max-width: 300px;
-        min-height: 200px;
-        min-width: 300px;
+        /* max-width: 100%; */
+        max-height: 450px;
+        max-width: 450px;
+        /* min-height: 200px;
+        min-width: 300px; */
       }
 
       #modal img {
@@ -53,8 +56,9 @@
         min-width: 500px; */
       }
       .container {
-        height: 200px;
+        height: 100px;
         position: relative;
+        justify-content: space-between;
       }
 
       .center {
@@ -79,12 +83,12 @@
       button {
         background-color: white;
         transition-duration: 0.5s;
-        margin: 0.2rem;
+        /* margin: 0.2rem;
         padding: 0.5rem;
         font-size: 1rem;
-        min-width: 115px;
-        justify-content: space-between;
-        /* align-items: center; */
+        min-width: 115px; */
+        /* justify-content: space-between;
+        align-items: center; */
       }
 
       button:hover {
@@ -190,7 +194,7 @@
           text-align: center;
           font-size: 3rem;
         }
-        h2 {
+        /* h2 {
           margin-left: 2rem;
         }
         p {
@@ -210,7 +214,7 @@
         img {
           margin-left: 4rem;
         }
-      }
+      } */
       /* Vinyl effekt */
 
       #container {
