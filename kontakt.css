@@ -1,0 +1,38 @@
+
+  iframe {
+    width: 90%;
+  }
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  margin-left: 40px;
+}
+
+h2 {
+  font-size: large;
+  font-family: "Roboto", sans-serif;
+}
+
+h3 {
+  font-size: x-small;
+  font-family: "Roboto", sans-serif;
+}
+
+.background-colormenubillede {
+  background-color: white;
+  margin-left: 20px;
+  padding-left: 20px;
+  margin-right: 20px;
+  padding-right: 20px;
+}
+
+@media (max-width: 499px) {
+  .background-colormenubillede {
+    background-color: white;
+    margin-left: 10px;
+    padding-left: 10px;
+    margin-right: 10px;
+    padding-right: 10px;
+  }
+}
