@@ -273,3 +273,50 @@ button:focus {
   justify-content: space-between;
   align-items: center;
 }
+/* Roterende Vinyl her */
+
+/* img {
+  display: block;
+  margin: left;
+  flex-grow: 1;
+} */
+
+body {
+  background-color: grey;
+}
+.image2 {
+  width: 75px;
+  display: inline-block;
+  margin: left;
+  opacity: 0.5;
+  /*     transform: rotate3d(1,0,0,45deg); */
+  animation: rotation 2s infinite linear;
+}
+
+.vinylcontainer {
+  transform-style: preserve-3d;
+  perspective: 350px;
+}
+
+.image1 {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  z-index: 1;
+}
+
+.image2 {
+  position: absolute;
+  left: -11px;
+  bottom: -7px;
+  z-index: 10;
+}
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
