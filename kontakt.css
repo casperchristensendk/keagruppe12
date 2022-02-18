@@ -4,7 +4,7 @@ iframe {
 
 h1 {
   font-family: "Didact Gothic", sans-serif;
-  margin-left: 40px;
+  margin-left: 10px;
 }
 
 h2 {
@@ -61,4 +61,209 @@ p {
   grid-row-gap: 0px;
   margin-left: 15px;
   padding-bottom: 30px;
+}
+
+/* Indsat Casper her */
+
+/* #casper_section text {
+  width: 100%;
+  height: auto;
+  display: block;
+} */
+
+body {
+  background-color: #f2f2f2;
+}
+h1 {
+  width: 100%;
+  height: auto;
+  display: block;
+  font-family: "Didact Gothic";
+  font-size: clamp(2.5rem, 10vw, 12rem);
+  font-weight: bold;
+  text-align: center;
+  color: white;
+}
+
+header {
+  width: 100%;
+  height: auto;
+  display: block;
+  font-family: "Didact Gothic";
+  font-size: clamp(0.5 rem, 2.5vw, 2rem);
+  /* text-align: left; */
+}
+.logo {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20%;
+  justify-content: left;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-family: "Rowdies";
+  font-size: 1rem;
+  font-weight: lighter;
+}
+ul {
+  list-style: none;
+}
+
+/* .logo a {
+  font-size: 5rem;
+  font-weight: 700;
+  color: white;
+} */
+footer {
+  text-align: center;
+  color: white;
+  font-family: "Freehand", cursive;
+  font-size: small;
+  background-color: #8c8c8c;
+}
+/* KOPIERET FRA DANNI HER  */
+/* header */
+.banner {
+  background: #5000ca22;
+  padding: 2rem;
+}
+
+.banner ul {
+  list-style: none;
+  padding: 0;
+}
+
+/* burgermenu */
+.toggle-btn {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+/* @media (max-width: 600px) { */
+.toggle-btn {
+  background: transparent;
+  border: none;
+  display: block;
+  min-width: 44px;
+  min-height: 44px;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+nav {
+  display: none;
+}
+
+nav.shown {
+  border-top: 1px solid white;
+  padding-top: 1rem;
+  display: flex;
+  flex: 1 1 100%;
+  flex-flow: column;
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  flex-flow: column;
+}
+
+/* KOPIERET FRA DANNI SLUT    */
+
+/* #second_section img {
+    background-image: white;
+  } */
+/* @media (max-width: 700px) {
+    h1 {
+      font-size: 8rem;
+    }
+  } */
+
+/* Forside Slideshow her */
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+}
+.mySlides {
+  display: none;
+}
+img {
+  vertical-align: middle;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev,
+  .next,
+  .text {
+    font-size: 11px;
+  }
+}
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+button {
+  background-color: white;
+  color: black;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border: 2px solid #8c8c8c;
+  /* transition-duration: 0.4s; */
+}
+
+button:hover {
+  background-color: #8c8c8c;
+}
+
+button:focus {
+  background-color: #8c8c8c;
+}
+
+.headercontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
