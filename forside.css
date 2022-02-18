@@ -281,9 +281,9 @@ button:focus {
   flex-grow: 1;
 } */
 
-body {
+/* body {
   background-color: grey;
-}
+} */
 .image2 {
   width: 75px;
   display: inline-block;
