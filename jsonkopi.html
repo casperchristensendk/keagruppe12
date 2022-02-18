@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Notable&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="jsonkopi.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <!-- favikon -->
+    <link rel="icon" type="image/x-icon" href="medium/pp.svg" />
+
+    <title>Pladepusheren</title>
+  </head>
+  <style>
+    #modal {
+      display: none;
+      width: 100vw;
+      height: 100vw;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: rgb(243, 243, 243);
+    }
+
+    #modal article {
+      max-width: 900px;
+      margin: 2rem;
+      background-color: rgb(243, 243, 243);
+    }
+
+    #modal p {
+      max-width: 40ch;
+      line-height: 1.5rem;
+    }
+    /* Vinyl effekt */
+
+    #container {
+      width: 500px;
+      height: 500px;
+      position: relative;
+      overflow: auto;
+    }
+
+    #record {
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+      z-index: 1;
+    }
+
+    #sleeve {
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+      z-index: 10;
+    }
+    ​
+      /* cover {
+        transition: 0.4s ease-in-out;
+        transform: scale(1.25) translate(22%);
+      } */
+      #record {
+      -webkit-transition: left 0.4s ease-out;
+      -moz-transition: left 0.4s ease-out;
+      -ms-transition: left 0.4s ease-out;
+      -o-transition: left 0.4s ease-out;
+      transition: left 0.4s ease-out;
+    }
+
+    #container:hover #record {
+      left: 100px; /* This is assuming you want it to slide from left-to-right */
+    }
+  </style>
+  <header>
+    <a href="#" class="fa fa-facebook"></a>
+    <a href="#" class="fa fa-instagram"></a>
+    <a href="#" class="fa fa-twitter"></a>
+    <!-- <div id="logo">
+      <img src="medium/pp.svg" alt="logo" />
+    </div> -->
+
+    <img class="overskrift" src="medium/pplogo.svg" alt="overskrift" />
+    <h2>tagline her</h2>
+    <button class="toggle-btn">Menu</button>
+    <nav>
+      <div class="container">
+        <div class="center">
+          <button data-plader="alle" class="valgt">Alle</button>
+          <button data-plader="Pop">Pop</button>
+          <button data-plader="Hip Hop">Hip Hop</button>
+          <button data-plader="Elektronisk">Elektronisk</button>
+          <button data-plader="Soul / Funk / Disco">Soul/Funk/Disco</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <hr />
+  <body>
+    <section id="liste"></section>
+
+    <template>
+      <article>
+        <h2 class="artist"></h2>
+        <img src="" alt="" class="artwork" />
+        <p></p>
+        <p class="pris"></p>
+      </article>
+    </template>
+
+    <aside id="modal">
+      <article>
+        <h2 class="artist"></h2>
+        <div id="container">
+          <img src="vinyl.png" width="500" height="500" id="record" />
+          <img src="" class="artwork" width="500" height="500" id="sleeve" />
+        </div>
+        <p></p>
+        <p class="pris"></p>
+      </article>
+    </aside>
+    <hr class="line" />
+    <footer>
+      Adresse: Guldbergsgade 97 1234 København K Åbningstider: Mandag - Fredag
+      10.30-22 Lørdag 12-00 - 23.00
+    </footer>
+    <script>
+      const header = document.querySelector("header h1");
+      const myHeaders = {
+        "x-apikey": "620e1ecc34fd6215658586f9",
+      };
+
+      document.addEventListener("DOMContentLoaded", start);
+      let albums;
+      let filter = "alle";
+      function start() {
+        const filterknapper = document.querySelectorAll("nav button");
+        filterknapper.forEach((knap) =>
+          knap.addEventListener("click", filtrerAlbums)
+        );
+        loadJSON();
+      }
+      function filtrerAlbums() {
+        filter = this.dataset.plader;
+        visAlbums();
+      }
+
+      async function loadJSON() {
+        console.log("loadJSON");
+        const JSONdata = await fetch(
+          "https://pladepusheren-6cfc.restdb.io/rest/albums",
+          { headers: myHeaders }
+        );
+        albums = await JSONdata.json();
+        console.log("Albums", albums);
+        visAlbums();
+      }
+
+      const dest = document.querySelector("#liste");
+      const skabelon = document.querySelector("template").content;
+
+      function visAlbums() {
+        console.log("visAlbums");
+        dest.textContent = "";
+        albums.forEach((album) => {
+          console.log("genre", album.genre);
+          console.log("alle filter: " + filter);
+          if (filter == album.genre || filter == "alle") {
+            const klon = skabelon.cloneNode(true);
+            klon.querySelector(".artist").textContent = album.artist;
+
+            klon.querySelector(".artwork").src = "medium/" + album.artwork;
+            klon.querySelector("p").textContent = album.kortbeskrivelse;
+            klon.querySelector(".pris").textContent = album.pris + ",-";
+            klon
+              .querySelector("article")
+              .addEventListener("click", () => visDetaljer(album));
+            dest.appendChild(klon);
+          }
+        });
+      }
+
+      // Modal
+
+      const container = document.querySelector("section");
+      const modal = document.querySelector("#modal");
+
+      function visDetaljer(album) {
+        console.log(album);
+        modal.querySelector("h2").textContent = album.artist;
+        modal.querySelector(".artwork").src = "medium/" + album.artwork;
+        modal.querySelector("p").textContent = album.kortbeskrivelse;
+        modal.querySelector("p").textContent = album.langbeskrivelse;
+
+        modal.style.display = "block";
+      }
+
+      modal.addEventListener("click", () => (modal.style.display = "none"));
+
+      const knap = document.querySelector(".toggle-btn");
+      const nav = document.querySelector("nav");
+
+      knap.addEventListener("click", toggleMenu);
+
+      function toggleMenu() {
+        console.log("toggleMenu");
+        nav.classList.toggle("shown");
+
+        const menuShown = nav.classList.contains("shown");
+
+        if (menuShown) {
+          knap.textContent = "Luk";
+          knap.classList.add("open");
+        } else {
+          knap.textContent = "Menu";
+          knap.classList.remove("open");
+        }
+      }
+      // Vinyl effekt
+
+      $("#container").hover(
+        function () {
+          var record = $("img:eq(0)", this);
+          record.stop(1, 0).animate(
+            {
+              left: "200px",
+            },
+            1000,
+            function () {
+              record.css("z-index", 11).stop(1, 0).animate(
+                {
+                  left: "0px",
+                },
+                1000
+              );
+            }
+          );
+        },
+        function () {
+          var record = $("img:eq(0)", this);
+          record.stop(1, 0).animate(
+            {
+              left: "200px",
+            },
+            1000,
+            function () {
+              record.css("z-index", 1).stop(1, 0).animate(
+                {
+                  left: "0px",
+                },
+                1000
+              );
+            }
+          );
+        }
+      );
+    </script>
+  </body>
+</html>
