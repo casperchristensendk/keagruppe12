@@ -43,11 +43,11 @@ ul {
   list-style: none;
 }
 
-/* .logo a {
+.logo a {
   font-size: 5rem;
   font-weight: 700;
   color: white;
-} */
+}
 footer {
   text-align: center;
   color: white;
