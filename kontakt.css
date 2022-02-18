@@ -34,34 +34,3 @@ h3 {
     padding-right: 10px;
   }
 }
-<<<<<<< HEAD
-=======
-
-#plade {
-  width: 1420px;
-  height: 300px;
-}
-
-#lilleplade {
-  width: 480px;
-  height: 381px;
-}
-
-p {
-  margin-left: 150px;
-  padding-left: 100px;
-  margin-right: 150px;
-  padding-right: 100px;
-  font-family: "Roboto", sans-serif;
-}
-
-.parent {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  margin-left: 15px;
-  padding-bottom: 30px;
-}
->>>>>>> 8a9510434aa73a8c584d2b9b956b06fbee7744e2
