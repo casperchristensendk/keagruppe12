@@ -24,7 +24,7 @@ header {
   display: block;
   font-family: "Didact Gothic";
   font-size: clamp(0.5 rem, 2.5vw, 2rem);
-  text-align: center;
+  /* text-align: left; */
 }
 .logo {
   font-family: Arial, Helvetica, sans-serif;
@@ -53,7 +53,7 @@ footer {
   color: white;
   font-family: "Freehand", cursive;
   font-size: small;
-  background-color: #f27405;
+  background-color: #8c8c8c;
 }
 /* KOPIERET FRA DANNI HER  */
 /* header */
@@ -95,6 +95,7 @@ nav.shown {
   display: flex;
   flex: 1 1 100%;
   flex-flow: column;
+  text-align: center;
 }
 
 nav ul {
@@ -255,14 +256,20 @@ button {
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
-  border: 2px solid #f27405;
+  border: 2px solid #8c8c8c;
   /* transition-duration: 0.4s; */
 }
 
 button:hover {
-  background-color: #f27405;
+  background-color: #8c8c8c;
 }
 
 button:focus {
-  background-color: #f27405;
+  background-color: #8c8c8c;
+}
+
+.headercontainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

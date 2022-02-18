@@ -75,6 +75,8 @@
         padding: 0.5rem;
         font-size: 1rem;
         min-width: 115px;
+        justify-content: space-between;
+        /* align-items: center; */
       }
 
       button:hover {
@@ -201,14 +203,54 @@
           margin-left: 4rem;
         }
       }
+      /* Vinyl effekt */
+
+      #container {
+        width: 500px;
+        height: 500px;
+        position: relative;
+        overflow: auto;
+      }
+
+      #record {
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        z-index: 1;
+      }
+
+      #sleeve {
+        position: absolute;
+        left: 0px;
+        bottom: 0px;
+        z-index: 10;
+      }
+      ​
+      /* cover {
+        transition: 0.4s ease-in-out;
+        transform: scale(1.25) translate(22%);
+      } */
+      #record {
+        -webkit-transition: left 0.4s ease-out;
+        -moz-transition: left 0.4s ease-out;
+        -ms-transition: left 0.4s ease-out;
+        -o-transition: left 0.4s ease-out;
+        transition: left 0.4s ease-out;
+      }
+
+      #container:hover #record {
+        left: 100px; /* This is assuming you want it to slide from left-to-right */
+      }
     </style>
   </head>
 
   <header class="banner">
     <div class="logo">
-      <img src="medium/logotilbistroooooo.jpg" alt="logo" />
+      <a href="forside.html">
+        <img src="pplogo.svg" alt="logo" />
+      </a>
     </div>
-    <h1>Pladepusheren</h1>
+    <h1>Pladesamling</h1>
 
     <h2>tagline her</h2>
     <button class="toggle-btn">Menu</button>
@@ -227,16 +269,26 @@
   </header>
   <body>
     <section id="liste"></section>
+    <template>
+      <article>
+        <h2 class="artist"></h2>
+        <!-- <h2 class="efternavn"></h2> -->
+        <img src="" alt="" class="artwork" />
+        <p></p>
+        <p class="pris"></p>
+      </article>
+    </template>
     <aside id="modal">
-      <template>
-        <article>
-          <h2 class="artist"></h2>
-          <!-- <h2 class="efternavn"></h2> -->
-          <img src="" alt="" class="artwork" />
-          <p></p>
-          <p class="pris"></p>
-        </article>
-      </template>
+      <article>
+        <h2 class="artist"></h2>
+        <!-- <h2 class="efternavn"></h2> -->
+        <div id="container">
+          <img src="vinyl.png" width="500" height="500" id="record" />
+          <img src="" class="artwork" width="500" height="500" id="sleeve" />
+        </div>
+        <p></p>
+        <p class="pris"></p>
+      </article>
     </aside>
     <footer>
       Adresse: Guldbergsgade 97 1234 København K Åbningstider: Mandag - Fredag
@@ -309,12 +361,14 @@
       function visDetaljer(album) {
         console.log(album);
         modal.querySelector("h2").textContent = album.artist;
-        modal.querySelector("artwork").src = "medium/" + album.artwork;
+        modal.querySelector(".artwork").src = "medium/" + album.artwork;
         modal.querySelector("p").textContent = album.kortbeskrivelse;
         modal.style.display = "block";
       }
 
       modal.addEventListener("click", () => (modal.style.display = "none"));
+
+      // Hover effekt
 
       // Burger menu her
       const knap = document.querySelector(".toggle-btn");
@@ -336,6 +390,45 @@
           knap.classList.remove("open");
         }
       }
+
+      // Vinyl effekt
+
+      $("#container").hover(
+        function () {
+          var record = $("img:eq(0)", this);
+          record.stop(1, 0).animate(
+            {
+              left: "200px",
+            },
+            1000,
+            function () {
+              record.css("z-index", 11).stop(1, 0).animate(
+                {
+                  left: "0px",
+                },
+                1000
+              );
+            }
+          );
+        },
+        function () {
+          var record = $("img:eq(0)", this);
+          record.stop(1, 0).animate(
+            {
+              left: "200px",
+            },
+            1000,
+            function () {
+              record.css("z-index", 1).stop(1, 0).animate(
+                {
+                  left: "0px",
+                },
+                1000
+              );
+            }
+          );
+        }
+      );
     </script>
   </body>
 </html>
