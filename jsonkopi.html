@@ -18,118 +18,66 @@
       href="https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="jsonkopi.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+    <link rel="stylesheet" href="json.css" />
+    <!-- <link rel="stylesheet" href="json.css" /> -->
     <!-- favikon -->
-    <link rel="icon" type="image/x-icon" href="medium/pp.svg" />
-
+    <!-- <link rel="icon" type="image/svg+xml" href="/medium/favikontema7.svg" /> -->
     <title>Pladepusheren</title>
+    <style></style>
   </head>
-  <style>
-    #modal {
-      display: none;
-      width: 100vw;
-      height: 100vw;
-      position: fixed;
-      top: 0;
-      left: 0;
-      background-color: rgb(243, 243, 243);
-    }
 
-    #modal article {
-      max-width: 900px;
-      margin: 2rem;
-      background-color: rgb(243, 243, 243);
-    }
+  <header class="banner">
+    <div class="logo">
+      <a href="forside.html">
+        <img src="pplogo.svg" alt="logo" />
+      </a>
+    </div>
+    <!-- <h1>Pladesamling</h1>
 
-    #modal p {
-      max-width: 40ch;
-      line-height: 1.5rem;
-    }
-    /* Vinyl effekt */
-
-    #container {
-      width: 500px;
-      height: 500px;
-      position: relative;
-      overflow: auto;
-    }
-
-    #record {
-      position: absolute;
-      left: 0px;
-      bottom: 0px;
-      z-index: 1;
-    }
-
-    #sleeve {
-      position: absolute;
-      left: 0px;
-      bottom: 0px;
-      z-index: 10;
-    }
-    ​
-      /* cover {
-        transition: 0.4s ease-in-out;
-        transform: scale(1.25) translate(22%);
-      } */
-      #record {
-      -webkit-transition: left 0.4s ease-out;
-      -moz-transition: left 0.4s ease-out;
-      -ms-transition: left 0.4s ease-out;
-      -o-transition: left 0.4s ease-out;
-      transition: left 0.4s ease-out;
-    }
-
-    #container:hover #record {
-      left: 100px; /* This is assuming you want it to slide from left-to-right */
-    }
-  </style>
-  <header>
-    <img class="overskrift" src="medium/pplogo.svg" alt="overskrift" />
-    <h2>tagline her</h2>
+    <h2>tagline her</h2> -->
     <button class="toggle-btn">Menu</button>
+
     <nav>
-      <div class="container">
-        <div class="center">
-          <button data-plader="alle" class="valgt">Alle</button>
-          <button data-plader="Pop">Pop</button>
-          <button data-plader="Hip Hop">Hip Hop</button>
-          <button data-plader="Elektronisk">Elektronisk</button>
-          <button data-plader="Soul / Funk / Disco">Soul/Funk/Disco</button>
-        </div>
+      <div class="knap_container">
+        <button data-plader="alle" class="valgt">Alle</button>
+        <button data-plader="Pop">Pop</button>
+        <button data-plader="Hip Hop">Hip Hop</button>
+        <button data-plader="Elektronisk">Elektronisk</button>
+        <button data-plader="Soul / Funk / Disco">Soul/Funk/Disco</button>
       </div>
     </nav>
-  </header>
 
-  <hr />
+    <div class="vinylcontainer">
+      <img class="image2" src="vinyl.png" alt="" />
+      <!-- <img class="image1" src="ppwhite.svg" alt="" width="20"> -->
+    </div>
+  </header>
   <body>
     <section id="liste"></section>
-
     <template>
       <article>
         <h2 class="artist"></h2>
+        <!-- <h2 class="efternavn"></h2> -->
         <img src="" alt="" class="artwork" />
-        <p></p>
+        <h3></h3>
         <p class="pris"></p>
       </article>
     </template>
-
     <aside id="modal">
       <article>
+        <hr />
         <h2 class="artist"></h2>
+        <hr />
+        <!-- <h2 class="efternavn"></h2> -->
         <div id="container">
-          <img src="vinyl.png" width="500" height="500" id="record" />
-          <img src="" class="artwork" width="500" height="500" id="sleeve" />
+          <img src="vinyl.png" width="450" height="450" id="record" />
+          <img src="" class="artwork" width="450" height="450" id="sleeve" />
         </div>
         <p></p>
+        <p class="langbeskrivelse"></p>
         <p class="pris"></p>
       </article>
     </aside>
-    <hr class="line" />
     <footer>
       Adresse: Guldbergsgade 97 1234 København K Åbningstider: Mandag - Fredag
       10.30-22 Lørdag 12-00 - 23.00
@@ -165,6 +113,9 @@
         console.log("Albums", albums);
         visAlbums();
       }
+      // function vis(json) {
+      //   console.log(json);
+      // }
 
       const dest = document.querySelector("#liste");
       const skabelon = document.querySelector("template").content;
@@ -181,6 +132,7 @@
 
             klon.querySelector(".artwork").src = "medium/" + album.artwork;
             klon.querySelector("p").textContent = album.kortbeskrivelse;
+
             klon.querySelector(".pris").textContent = album.pris + ",-";
             klon
               .querySelector("article")
@@ -200,13 +152,17 @@
         modal.querySelector("h2").textContent = album.artist;
         modal.querySelector(".artwork").src = "medium/" + album.artwork;
         modal.querySelector("p").textContent = album.kortbeskrivelse;
-        modal.querySelector("p").textContent = album.langbeskrivelse;
-
+        modal.querySelector(".langbeskrivelse").textContent =
+          album.langbeskrivelse;
+        modal.querySelector(".pris").textContent = album.pris + ",-";
         modal.style.display = "block";
       }
 
       modal.addEventListener("click", () => (modal.style.display = "none"));
 
+      // Hover effekt
+
+      // Burger menu her
       const knap = document.querySelector(".toggle-btn");
       const nav = document.querySelector("nav");
 
@@ -226,6 +182,7 @@
           knap.classList.remove("open");
         }
       }
+
       // Vinyl effekt
 
       $("#container").hover(
@@ -233,7 +190,7 @@
           var record = $("img:eq(0)", this);
           record.stop(1, 0).animate(
             {
-              left: "200px",
+              left: "400px",
             },
             1000,
             function () {
@@ -250,7 +207,7 @@
           var record = $("img:eq(0)", this);
           record.stop(1, 0).animate(
             {
-              left: "200px",
+              left: "400px",
             },
             1000,
             function () {

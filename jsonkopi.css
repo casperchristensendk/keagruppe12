@@ -1,95 +1,161 @@
-/* /////////////////// */
 body {
-  padding: 3rem;
-  background-color: rgb(240, 241, 243);
-}
-.overskrift {
-  align-items: center;
-  margin: 0;
+  padding: 2rem;
 }
 
 /* burgermenu */
 .toggle-btn {
-  display: none;
+  /* display: none;
   flex-direction: row;
-  font-family: "Didact Gothic", sans-serif;
-}
-section {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-}
-img {
-  max-width: 100%;
-  max-height: 200px;
-  max-width: 300px;
-  min-height: 200px;
-  min-width: 300px;
+  font-family: "Didact Gothic", sans-serif; */
 }
 
-header h2 {
-  font-family: "Didact Gothic", sans-serif;
+section {
+  /* display: inline-grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr); */
+
+  /* grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); */
+  /* grid-column-gap: 1px solid black;
+        grid-row-gap: 1px solid black; */
+  /* overflow: hidden; */
+
+  /* padding: 15px;
+  text-align: center; */
+}
+img {
+  /* max-width: 100%; */
+
+  /* max-height: 450px;
+  max-width: 450px; */
+
+  /* min-height: 200px;
+              min-width: 300px; */
+}
+
+#modal img {
+  /* max-width: 100%; */
+
+  /* max-height: 450px;
+  max-width: 450px; */
+
+  /* min-height: 500px;
+              min-width: 500px; */
+}
+.container {
+  /* height: 300px;
+  position: relative; */
+
+  /* justify-content: space-between; */
+
+  /* text-align: left; */
+}
+
+.center {
+  /* margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%; */
+  /* transform: translate(-50%, -50%); */
+}
+header h1 {
+  /* font-family: "Didact Gothic", sans-serif;
   color: black;
   text-align: center;
-  font-size: 1.8rem;
+  font-size: 4rem; */
 }
-button {
+header h2 {
+  /* font-family: "Didact Gothic", sans-serif;
+  color: black;
+  text-align: center;
+  font-size: 2rem; */
+}
+.knap_container button {
   background-color: white;
-  transition-duration: 0.5s;
+  /* transition-duration: 0.5s; */
   margin: 0.2rem;
   padding: 0.5rem;
   font-size: 1rem;
   min-width: 115px;
 }
 
-button:hover {
-  background-color: grey;
+.knap_container {
+  display: flex;
+  justify-content: center;
 }
 
-h2 {
-  font-family: "Didact Gothic", sans-serif;
-  margin-left: 4rem;
-}
-img {
-  margin-left: 4rem;
-}
-/* modal styling */
-#modal {
-  display: none;
-  width: 100vw;
-  height: 100vw;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-
-#modal article {
-  max-width: 900px;
-  margin: 2rem;
-}
-
-#modal p {
-  max-width: 40ch;
-  line-height: 1.5rem;
-}
-
-p {
-  font-size: 1rem;
-  max-width: 40ch;
-  color: rgb(61, 60, 60);
-  font-family: "Didact Gothic", sans-serif;
-  margin-left: 1rem;
-}
-footer {
+button {
+  /* background-color: white;
+  color: black;
+  padding: 16px 32px;
   text-align: center;
-  margin-top: 5rem;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border: 2px solid black; */
+
+  /* transition-duration: 0.4s;
+}
+
+button:hover {
+  /* background-color: black;
+  color: white; */
+}
+p {
   font-family: "Didact Gothic", sans-serif;
+}
+
+@media (min-width: 150px) {
+  /* h2 {
+    margin-left: 4rem;
+  }
+  p {
+    margin-left: 4rem;
+  }
+  img {
+    margin-left: 4rem;
+  } */
+
+  #modal {
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+  }
+
+  /* #modal article {
+    max-width: 600px;
+    background-color: rgb(243, 243, 243);
+  }
+
+  #modal p {
+    max-width: 40ch;
+    line-height: 1.5rem;
+  } */
+
+  /* img {
+    border: solid rgb(83, 83, 83);
+  } */
+
+  /* p {
+    font-size: 1rem;
+    max-width: 40ch;
+    color: rgb(61, 60, 60);
+  }
+  footer {
+    text-align: center;
+    margin-top: 5rem;
+  } */
 }
 
 /* knapperne når de er i mobil */
 @media (max-width: 650px) {
-  .toggle-btn {
+  /* .toggle-btn {
     background: transparent;
     border: none;
     display: block;
@@ -114,19 +180,19 @@ footer {
   nav ul {
     display: flex;
     flex-flow: column;
-  }
-  button {
-    display: flex;
-    background-color: white;
-    transition-duration: 0.5s;
-    margin: 1rem;
-    padding: 0.2rem;
-    font-size: 1rem;
-    min-width: 115px;
-    text-align: center;
-  }
+  } */
+  /* button {
+          display: flex;
+          background-color: white;
+          transition-duration: 0.5s;
+          margin: 1rem;
+          padding: 0.2rem;
+          font-size: 1rem;
+          min-width: 115px;
+          text-align: center;
+        } */
 
-  button:hover {
+  /* button:hover {
     background-color: grey;
   }
   header h1 {
@@ -139,47 +205,135 @@ footer {
   h2 {
     margin-left: 2rem;
   }
-
-  img {
-    margin-left: 2rem;
-  }
-}
-@media (max-width: 900px) {
-  /* button:hover {
-    background-color: grey;
-  } */
-  .center {
-    margin-left: 3rem;
-  }
   p {
     margin-left: 2rem;
   }
   img {
-    margin-right: 10rem;
-  }
-  .overskrift {
-    min-width: 400px;
-  }
+    margin-left: 2rem;
+  } */
 }
-
-@media (min-width: 1000px) {
+/* @media (min-width: 1000px) {
   h2 {
     margin-left: 4rem;
   }
   p {
     margin-left: 4rem;
   }
-  img {
-    margin-left: 4rem;
+  article img {
+    max-width: 100%;
   }
-  .center {
-    margin-left: 22rem;
+} */
+/* Vinyl effekt */
+
+#container {
+  max-width: 700px;
+  height: 450px;
+  position: relative;
+  overflow: auto;
+}
+
+#record {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  z-index: 1;
+  animation: recordout 1s 1 both;
+}
+
+@keyframes recordout {
+  to {
+    left: 180px;
   }
-  .overskrift {
-    min-width: 600px;
-    margin-left: 6rem;
+}
+
+#sleeve {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  z-index: 10;
+}
+
+​
+            /* cover {
+              transition: 0.4s ease-in-out;
+              transform: scale(1.25) translate(22%);
+            } */
+            /* #record {
+  -webkit-transition: left 0.4s ease-out;
+  -moz-transition: left 0.4s ease-out;
+  -ms-transition: left 0.4s ease-out;
+  -o-transition: left 0.4s ease-out;
+  transition: left 0.4s ease-out;
+} */
+
+#container:hover #record {
+  /* left: 100px;  */
+
+  /* This is assuming you want it to slide from left-to-right */
+}
+
+/* .artist {
+  font-family: "Didact Gothic", sans-serif;
+} */
+
+/* #liste {
+        display: flex;
+        flex-wrap: wrap;
+      } */
+
+#liste {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  gap: 50px;
+  margin: 20px;
+}
+
+#liste img {
+  width: 100%;
+}
+/* Vinyl spinning effekt */
+
+/* img {
+  display: block;
+  margin: left;
+  flex-grow: 1;
+}
+
+.image2 {
+  width: 121px;
+  display: inline-block;
+  margin: left;
+  opacity: 0.5;
+  animation: rotation 2s infinite linear;
+} */
+
+/* .container {
+  transform-style: preserve-3d;
+  perspective: 350px;
+}
+
+.image1 {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  z-index: 1;
+}
+
+.image2 {
+  position: absolute;
+  left: -5px;
+  top: -4px;
+  z-index: 10;
+} */
+
+@keyframes rotation {
+  from {
+    -webkit-transform: rotate(0deg);
   }
-  .center {
-    padding: 2rem;
+  to {
+    -webkit-transform: rotate(359deg);
   }
+}
+.vinylcontainer {
+  display: none;
 }
