@@ -26,6 +26,17 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: #f2f2f2;
+  padding: 1rem;
+}
+
+.logosection {
+  width: 50%;
+  justify-content: space-around;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  padding: 100px;
 }
 
 /* burgermenu */

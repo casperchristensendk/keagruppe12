@@ -7,6 +7,32 @@
   background: black;
   color: white;
 }
+.header-banner text {
+  color: white;
+}
+
+.header {
+  width: 100%;
+  height: auto;
+  display: block;
+  font-family: "Didact Gothic";
+  font-size: clamp(1 rem, 2.5vw, 2rem);
+  text-align: left;
+  padding: 60px 0;
+  text-align: center;
+  background: black;
+  color: white;
+}
+
+.logosection {
+  width: 50%;
+  justify-content: space-around;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  padding: 100px;
+}
 
 /* #casper_section text {
   width: 100%;
@@ -28,14 +54,6 @@ h1 {
   color: white;
 }
 
-header {
-  width: 100%;
-  height: auto;
-  display: block;
-  font-family: "Didact Gothic";
-  font-size: clamp(0.5 rem, 2.5vw, 2rem);
-  /* text-align: left; */
-}
 .logo {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20%;
@@ -67,7 +85,7 @@ footer {
 }
 /* KOPIERET FRA DANNI HER  */
 /* header */
-/* .banner {
+.banner {
   background: #5000ca22;
   padding: 2rem;
 }
@@ -75,38 +93,38 @@ footer {
 .banner ul {
   list-style: none;
   padding: 0;
-} */
+}
 
 /* burgermenu */
-/* .toggle-btn {
+.toggle-btn {
   display: flex;
   justify-content: center;
   color: black;
-} */
+}
 
 /* @media (max-width: 600px) { */
-/* .toggle-btn {
+.toggle-btn {
   background: transparent;
   border: none;
   display: block;
   min-width: 44px;
   min-height: 44px;
-  font-size: 1.1rem;
+  font-size: 2rem;
   cursor: pointer;
-} */
+}
 
-/* nav {
+nav {
   display: none;
-} */
+}
 
-/* nav.shown {
+nav.shown {
   border-top: 1px solid white;
   padding-top: 1rem;
   display: flex;
   flex: 1 1 100%;
   flex-flow: column;
   text-align: center;
-} */
+}
 
 nav ul {
   display: flex;
@@ -284,6 +302,7 @@ button:focus {
   justify-content: space-between;
   align-items: center;
   background-color: #f2f2f2;
+  padding: 1rem;
 }
 /* Roterende Vinyl her */
 
