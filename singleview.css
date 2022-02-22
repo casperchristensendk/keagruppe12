@@ -31,41 +31,41 @@ header {
 /* burgermenu */
 .toggle-btn {
   /* display: none;
-  flex-direction: row;
-  font-family: "Didact Gothic", sans-serif; */
+    flex-direction: row;
+    font-family: "Didact Gothic", sans-serif; */
 }
 
 section {
   /* display: inline-grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr); */
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr); */
 
   /* grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); */
   /* grid-column-gap: 1px solid black;
-        grid-row-gap: 1px solid black; */
+          grid-row-gap: 1px solid black; */
   /* overflow: hidden; */
 
   /* padding: 15px;
-  text-align: center; */
+    text-align: center; */
 }
 img {
   /* max-width: 100%; */
 
   /* max-height: 450px;
-  max-width: 450px; */
+    max-width: 450px; */
 
   /* min-height: 200px;
-              min-width: 300px; */
+                min-width: 300px; */
 }
 
 #modal img {
   /* max-width: 100%; */
 
   /* max-height: 450px;
-  max-width: 450px; */
+    max-width: 450px; */
 
   /* min-height: 500px;
-              min-width: 500px; */
+                min-width: 500px; */
 }
 .container {
   height: 300px;
@@ -78,9 +78,9 @@ img {
 
 .center {
   /* margin: 0;
-  position: absolute;
-  top: 50%;
-  left: 50%; */
+    position: absolute;
+    top: 50%;
+    left: 50%; */
   /* transform: translate(-50%, -50%); */
 }
 header h1 {
@@ -123,11 +123,11 @@ button {
   border: 2px solid black;
 
   /* transition-duration: 0.4s;
-}
-
-/* button:hover { */
+  }
+  
+  /* button:hover { */
   /* background-color: black;
-  color: white; */
+    color: white; */
 }
 p {
   font-family: "Didact Gothic", sans-serif;
@@ -135,14 +135,14 @@ p {
 
 @media (min-width: 150px) {
   /* h2 {
-    margin-left: 4rem;
-  }
-  p {
-    margin-left: 4rem;
-  }
-  img {
-    margin-left: 4rem;
-  } */
+      margin-left: 4rem;
+    }
+    p {
+      margin-left: 4rem;
+    }
+    img {
+      margin-left: 4rem;
+    } */
 
   #modal {
     display: none;
@@ -155,28 +155,28 @@ p {
   }
 
   /* #modal article {
-    max-width: 600px;
-    background-color: rgb(243, 243, 243);
-  }
-
-  #modal p {
-    max-width: 40ch;
-    line-height: 1.5rem;
-  } */
+      max-width: 600px;
+      background-color: rgb(243, 243, 243);
+    }
+  
+    #modal p {
+      max-width: 40ch;
+      line-height: 1.5rem;
+    } */
 
   /* img {
-    border: solid rgb(83, 83, 83);
-  } */
+      border: solid rgb(83, 83, 83);
+    } */
 
   /* p {
-    font-size: 1rem;
-    max-width: 40ch;
-    color: rgb(61, 60, 60);
-  }
-  footer {
-    text-align: center;
-    margin-top: 5rem;
-  } */
+      font-size: 1rem;
+      max-width: 40ch;
+      color: rgb(61, 60, 60);
+    }
+    footer {
+      text-align: center;
+      margin-top: 5rem;
+    } */
 }
 
 /* knapperne når de er i mobil */
@@ -241,16 +241,16 @@ p {
   }
 }
 /* @media (min-width: 1000px) {
-  h2 {
-    margin-left: 4rem;
-  }
-  p {
-    margin-left: 4rem;
-  }
-  article img {
-    max-width: 100%;
-  }
-} */
+    h2 {
+      margin-left: 4rem;
+    }
+    p {
+      margin-left: 4rem;
+    }
+    article img {
+      max-width: 100%;
+    }
+  } */
 /* Vinyl effekt */
 
 #container {
@@ -282,32 +282,32 @@ p {
 }
 
 ​
-            /* cover {
-              transition: 0.4s ease-in-out;
-              transform: scale(1.25) translate(22%);
-            } */
-            /* #record {
-  -webkit-transition: left 0.4s ease-out;
-  -moz-transition: left 0.4s ease-out;
-  -ms-transition: left 0.4s ease-out;
-  -o-transition: left 0.4s ease-out;
-  transition: left 0.4s ease-out;
-} */
-
-#container:hover #record {
+              /* cover {
+                transition: 0.4s ease-in-out;
+                transform: scale(1.25) translate(22%);
+              } */
+              /* #record {
+    -webkit-transition: left 0.4s ease-out;
+    -moz-transition: left 0.4s ease-out;
+    -ms-transition: left 0.4s ease-out;
+    -o-transition: left 0.4s ease-out;
+    transition: left 0.4s ease-out;
+  } */
+  
+  #container:hover #record {
   /* left: 100px;  */
 
   /* This is assuming you want it to slide from left-to-right */
 }
 
 /* .artist {
-  font-family: "Didact Gothic", sans-serif;
-} */
+    font-family: "Didact Gothic", sans-serif;
+  } */
 
 /* #liste {
-        display: flex;
-        flex-wrap: wrap;
-      } */
+          display: flex;
+          flex-wrap: wrap;
+        } */
 
 #liste {
   display: grid;
@@ -322,37 +322,37 @@ p {
 /* Vinyl spinning effekt */
 
 /* img {
-  display: block;
-  margin: left;
-  flex-grow: 1;
-}
-
-.image2 {
-  width: 121px;
-  display: inline-block;
-  margin: left;
-  opacity: 0.5;
-  animation: rotation 2s infinite linear;
-} */
+    display: block;
+    margin: left;
+    flex-grow: 1;
+  }
+  
+  .image2 {
+    width: 121px;
+    display: inline-block;
+    margin: left;
+    opacity: 0.5;
+    animation: rotation 2s infinite linear;
+  } */
 
 /* .container {
-  transform-style: preserve-3d;
-  perspective: 350px;
-}
-
-.image1 {
-  position: absolute;
-  left: 0px;
-  bottom: 0px;
-  z-index: 1;
-}
-
-.image2 {
-  position: absolute;
-  left: -5px;
-  top: -4px;
-  z-index: 10;
-} */
+    transform-style: preserve-3d;
+    perspective: 350px;
+  }
+  
+  .image1 {
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    z-index: 1;
+  }
+  
+  .image2 {
+    position: absolute;
+    left: -5px;
+    top: -4px;
+    z-index: 10;
+  } */
 
 @keyframes rotation {
   from {
@@ -425,6 +425,24 @@ ul {
 }
 
 /* lagt ind */
+
+/* body {
+  background-image: url("backgroundliggende.png");
+  width: 1920px;
+} */
+
+/* div::after {
+  content: "";
+  background: url(backgroundliggende.png);
+  opacity: 50%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+} */
+
 footer {
   text-align: center;
   color: white;
