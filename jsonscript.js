@@ -34,6 +34,7 @@ const myHeaders = {
 };
 
 document.addEventListener("DOMContentLoaded", start);
+
 let albums;
 let filter = "alle";
 function start() {
