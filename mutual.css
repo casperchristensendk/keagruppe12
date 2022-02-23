@@ -19,7 +19,14 @@
   background: #0d0d0d;
 }
 h1 {
-  font-family: "Didact Gothic", Times, serif;
+  width: 100%;
+  height: auto;
+  display: block;
+  font-family: "Didact Gothic";
+  font-size: clamp(2.5rem, 10vw, 12rem);
+  font-weight: bold;
+  text-align: center;
+  color: white;
 }
 h2 {
   font-family: "Didact Gothic", Times, serif;
