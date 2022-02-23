@@ -265,7 +265,8 @@ p {
   left: 0px;
   bottom: 0px;
   z-index: 1;
-  animation: recordout 1s 1 both;
+  animation: recordout 4s 1 both;
+  transition: left 0.4s ease-in;
 }
 
 @keyframes recordout {
