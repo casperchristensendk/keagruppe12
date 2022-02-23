@@ -1,17 +1,17 @@
-.header-banner {
-  /* background-color: black; */
-  font-family: "Didact Gothic";
-  width: 100%;
-  /* padding: 60px 0; */
-  text-align: center;
+/* .header-banner { */
+/* background-color: black; */
+/* font-family: "Didact Gothic";
+  width: 100%; */
+/* padding: 60px 0; */
+/* text-align: center;
   background: black;
   color: white;
-}
-.header-banner text {
+} */
+/* .header-banner text {
   color: white;
-}
+} */
 
-.header {
+/* .header {
   width: 100%;
   height: auto;
   display: block;
@@ -22,7 +22,7 @@
   text-align: center;
   background: black;
   color: white;
-}
+} */
 
 .logosection {
   width: 50%;
@@ -33,12 +33,6 @@
   width: 60%;
   padding: 100px;
 }
-
-/* #casper_section text {
-  width: 100%;
-  height: auto;
-  display: block;
-} */
 
 /* body {
   background-color: #f2f2f2;

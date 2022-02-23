@@ -1,0 +1,148 @@
+.color {
+  height: 70px;
+  width: 70px;
+  border: 5px solid #fff;
+}
+.color_1 {
+  background: #f2f2f2;
+}
+.color_2 {
+  background: #8c8c8c;
+}
+.color_3 {
+  background: #595959;
+}
+.color_4 {
+  background: #262626;
+}
+.color_5 {
+  background: #0d0d0d;
+}
+h1 {
+  font-family: "Didact Gothic", Times, serif;
+}
+h2 {
+  font-family: "Didact Gothic", Times, serif;
+}
+p {
+  font-family: "Didact Gothic";
+}
+li {
+  display: inline;
+  gap: 50px;
+  justify-content: center;
+}
+a {
+  font-family: "Times New Roman", Times, serif;
+  text-decoration: none;
+  font-weight: 700;
+  color: white;
+  padding: 10px;
+}
+nav {
+  display: flex;
+  justify-content: flex-end;
+}
+p {
+  font-family: "Times New Roman", Times, serif;
+}
+
+body {
+  margin: 2;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f2f2f2;
+}
+
+/* Header banner Fri fragt ved køb over */
+.header-banner {
+  /* background-color: black; */
+  font-family: "Didact Gothic";
+  width: 100%;
+  /* padding: 60px 0; */
+  text-align: center;
+  background: black;
+  color: white;
+}
+.header-banner text {
+  color: white;
+}
+
+/* Responsive sticky header */
+.header {
+  overflow: hidden;
+  background-image: url(backgroundliggendenyny.png);
+  padding: 20px 10px;
+  /* position: -webkit-sticky;
+    position: sticky; */
+  top: 0;
+  /* padding: 50px;
+      font-size: 20px; */
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border: solid black 2px;
+  margin: 8px;
+  font-family: "Didact Gothic", sans-serif;
+}
+
+.header a.logo {
+  background-color: black;
+  color: white;
+}
+
+.header a:hover {
+  background-color: black;
+  color: white;
+}
+
+.header a:hover .logowhite {
+  display: inline;
+}
+
+.header a:hover .logoblack {
+  display: none;
+}
+
+.logowhite {
+  display: none;
+}
+
+/* .header a.active {
+    background-color: dodgerblue;
+    color: white;
+  } */
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+
+  .header-right {
+    float: none;
+  }
+  div.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    padding: 50px;
+    font-size: 20px;
+  }
+}
+footer {
+  text-align: center;
+  /* background-color: #8c8c8c; */
+  background-image: url(backgroundliggendenyny.png);
+  padding: 20px;
+}

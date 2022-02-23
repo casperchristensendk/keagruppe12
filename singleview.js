@@ -58,7 +58,9 @@ function visAlbums() {
     //   .querySelector("article")
     //   .addEventListener("click", () => visDetaljer(albums));
     // dest.appendChild(document);
+    document.querySelector("#record").classList.add("animation");
   }
+
   // });
 }
 

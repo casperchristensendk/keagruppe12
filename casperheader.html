@@ -12,14 +12,20 @@
     }
 
     body {
-      margin: 0;
+      margin: 2;
       font-family: Arial, Helvetica, sans-serif;
+      background-color: #f2f2f2;
     }
-
+    /* Responsive sticky header */
     .header {
       overflow: hidden;
-      background-color: #f1f1f1;
+      background-image: url(backgroundliggendenyny.png);
       padding: 20px 10px;
+      /* position: -webkit-sticky;
+      position: sticky; */
+      top: 0;
+      /* padding: 50px;
+        font-size: 20px; */
     }
 
     .header a {
@@ -30,23 +36,37 @@
       text-decoration: none;
       font-size: 18px;
       line-height: 25px;
-      border-radius: 4px;
+    border: solid black 2px;
+    margin: 8px;
+    font-family:"Didact Gothic", sans-serif; 
     }
 
     .header a.logo {
-      font-size: 25px;
-      font-weight: bold;
+      background-color: black;
+      color: white;
     }
 
     .header a:hover {
-      background-color: #ddd;
-      color: black;
-    }
-
-    .header a.active {
-      background-color: dodgerblue;
+      background-color: black;
       color: white;
     }
+
+    .header a:hover .logowhite {
+      display: inline;
+    }
+
+    .header a:hover .logoblack {
+      display: none;
+    }
+
+    .logowhite {
+      display: none;
+    }
+
+    /* .header a.active {
+      background-color: dodgerblue;
+      color: white;
+    } */
 
     .header-right {
       float: right;
@@ -62,21 +82,95 @@
       .header-right {
         float: none;
       }
+      div.sticky {
+        position: -webkit-sticky;
+        position: sticky;
+        padding: 50px;
+        font-size: 20px;
+      }
+    }
+    footer {
+      text-align: center;
+      /* background-color: #8c8c8c; */
+      background-image: url(backgroundliggendenyny.png);
+      padding: 20px;
     }
   </style>
   <body>
     <div class="header">
-      <a href="forside.html"><img src="pp.svg" alt="logo" width="30" /></a>
+      <div class="headerlogo">
+      <a href="forside.html">
+        <img class="logoblack" src="pp.svg" alt="logo" width="30"/>
+        <img class="logowhite" src="pplogowhite.svg" alt="logo" width="30"/>
+      </a>
+    </div>
       <div class="header-right">
         <a href="jsonkopi.html">Pladesamling</a>
         <a href="kontakt.html">Kontakt</a>
       </div>
     </div>
 
-    <div style="padding-left: 20px">
-      <h1>Responsive Header</h1>
-      <p>Resize the browser window to see the effect.</p>
-      <p>Some content..</p>
+    <div class="main">
+      <h1>Fixed Top Menu</h1>
+      <h2>Scroll this page to see the effect</h2>
+      <h2>
+        The navigation bar will stay at the top of the page while scrolling
+      </h2>
+
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
+      <p>Some text some text some text some text..</p>
     </div>
+    <footer>
+      <img src="pplogo.svg" alt="PP white" width="250" />
+      <div>
+        <!-- <a href="https://www.facebook.com/casperchristensen.dk/"> -->
+          <img src="fbwhite.png" alt="Facebook" width="18" />
+        </a>
+        <!-- <a href="https://www.instagram.com/"> -->
+          <img src="igwhite.png" alt="Instagram" width="18" />
+        </a>
+        <!-- <a href="https://www.linkedin.com/in/casper-christensen-65621182/"> -->
+          <img src="liwhite.png" alt="linkedin" width="18" />
+        </a>
+      </div>
+    </footer>
   </body>
 </html>
