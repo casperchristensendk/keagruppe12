@@ -1,0 +1,52 @@
+body {
+  padding: 2rem;
+}
+h1 {
+  margin-top: 3.2rem;
+  text-align: center;
+  font-family: "Didact Gothic", sans-serif;
+}
+h2 {
+  font-size: 1rem;
+  text-align: center;
+  font-family: "Didact Gothic", sans-serif;
+}
+
+/*knap styling*/
+.knap_grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.link a {
+  color: black;
+  font-family: "Didact Gothic", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.link {
+  grid-column: 3/4;
+  color: antiquewhite;
+  border: black 1px solid;
+  padding-inline: 10px;
+  padding-block: 10px;
+  z-index: 1;
+  place-self: center;
+}
+
+/*hover*/
+.link:hover {
+  background: grey;
+  border: none;
+}
+
+.link a:hover {
+  color: rgb(255, 255, 255);
+}
+
+.collage {
+  object-fit: cover;
+}

@@ -50,78 +50,48 @@
   </header>
   <body>
     <!-- <h1>Om os</h1> -->
-    <div class="background-colormenubillede">
-      <img id="plade" src="pp.svg" alt="pladespiller" />
+    <!-- <div class="background-colormenubillede">
+      <img id="plade" src="pp.svg" alt="pladespiller" /> -->
     </div>
     <div class="grid-item">
-      <h1>Historien bag</h1>
+      <div class="text1"></div>
+      <h1>Kontakt os</h1>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis et
-        culpa suscipit, voluptatum magnam sed, doloremque adipisci dolor
-        eligendi earum commodi fugit? Facilis et minus quae ipsum nisi incidunt
-        hic. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis sed
-        dicta modi provident illo repudiandae eaque ipsum consequatur ad,
-        recusandae necessitatibus perferendis beatae minima esse dolor, corporis
-        quo amet dolores? Lorem ipsum dolor sit, amet consectetur adipisicing
-        elit. Accusantium velit rerum consectetur illum! Sed atque tenetur
-        accusantium. Qui numquam excepturi deserunt doloremque blanditiis cumque
-        at soluta magnam itaque, exercitationem molestiae.
+Har du spørgsmål, ris eller ros? Så smid os en besked via formularen.  
       </p>
-    </div>
-    <div class="parent">
-      <img id="lilleplade" src="plade1.jpg" alt="" />
-      <img id="lilleplade" src="plade2.jpg" alt="" />
-      <img id="lilleplade" src="plade3.jpg" alt="" />
     </div>
 
     <div class="grid-container">
+      
       <div class="grid-item">
-        <h2>Åbningstider</h2>
-        <h3>Mandag: 9:00-15:00</h3>
-        <h3>Tirsdag: 9:00-15:00</h3>
-        <h3>Onsdag: 9:00-15:00</h3>
-        <h3>Torsdag: 9:00-15:00</h3>
-        <h3>Fredag: 9:00-15:00</h3>
-        <h3>Lørdag: 9:00-17:00</h3>
-        <h3>Søndag: 9:00-16:00</h3>
-        <br />
-        <h2>Smid os en mail og vi svare hurtigst muligt!</h2>
-        <h3>pladepusheren@gmail.dk</h3>
-        <br />
+        <form action="/tak.html" class="contact" name="contact" netlify>
+          <h2>Smid os en besked</h2>
+          
+          <div class="form_felt">
+            <label for="navn">Navn</label>
+            <input placeholder="" type="text" id="navn" />
+          </div>
+
+          <div class="form_felt">
+            <label for="mail">E-mail</label>
+            <input placeholder="" type="email" id="mail" />
+          </div>
+
+          <div class="form_felt">
+            <label for="anledning">Hvad har du på hjerte?</label>
+            <input
+              placeholder=""
+              type="text"
+              id="anledning"
+              style="height: 100px" 
+            />
+          </div>
+          <button type="submit">Send</button>
+        </form>
       </div>
-      <!-- <div class="grid-item">
-        <div class="container">
-          <form action="action_page.php">
-            <label for="fname">Navn</label>
-            <input
-              type="text"
-              id="fname"
-              name="firstname"
-              placeholder="dit navn.."
-            />
-
-            <label for="lname">E-mail</label>
-            <input
-              type="text"
-              id="lname"
-              name="lastname"
-              placeholder="din e-mail.."
-            />
-
-            <label for="subject">Kontakt os</label>
-            <textarea
-              id="subject"
-              name="subject"
-              placeholder="hvad har du på hjerte?"
-              style="height: 200px"
-            ></textarea>
-
-            <input type="submit" value="Submit" />
-          </form>
-        </div>
-      </div> -->
 
       <div class="grid-item">
+        <h2>Du finder din lokale pladepusher lige her</h2>
         <iframe
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d8995.398179088925!2d12.545944969775396!3d55.69160349999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465253abae55267d%3A0x7f06e00bd751130a!2sKEA%20K%C3%B8benhavns%20Erhvervsakademi%20-%20Main%20Campus!5e0!3m2!1sda!2sdk!4v1645526497619!5m2!1sda!2sdk"
           width="600"
