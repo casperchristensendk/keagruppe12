@@ -39,7 +39,8 @@ h2 {
 
 /*hover*/
 .link:hover {
-  background: grey;
+  background-color: black;
+  color: white;
   border: none;
 }
 
