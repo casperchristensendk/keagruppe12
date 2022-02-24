@@ -24,6 +24,7 @@
     <title>Pladepusheren</title>
     <link rel="icon" type="image/png" href="ppfavicon.png" />
   </head>
+<<<<<<< HEAD
   <div class="header-banner">Gratis fragt ved køb over 299,-</div>
   <div class="header">
     <div class="headerlogo">
@@ -41,6 +42,64 @@
     <img src="pplogo.svg" alt="logo" />
   </section>
   <section id="albums">
+=======
+  <style>
+    #modal {
+      background-color: rgb(243, 243, 243);
+    }
+
+    #modal article {
+      background-color: rgb(243, 243, 243);
+    }
+
+    #modal p {
+      max-width: 40ch;
+      line-height: 1.5rem;
+    }
+    /* Vinyl effekt */
+
+    #container {
+      width: 500px;
+      height: 500px;
+      position: relative;
+      overflow: auto;
+    }
+
+    #record {
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+      z-index: 1;
+    }
+
+    #sleeve {
+      position: absolute;
+      left: 0px;
+      bottom: 0px;
+      z-index: 10;
+    }
+    ​
+      /* cover {
+        transition: 0.4s ease-in-out;
+        transform: scale(1.25) translate(22%);
+      } */
+      #record {
+      -webkit-transition: left 0.4s ease-out;
+      -moz-transition: left 0.4s ease-out;
+      -ms-transition: left 0.4s ease-out;
+      -o-transition: left 0.4s ease-out;
+      transition: left 0.4s ease-out;
+    }
+
+    #container:hover #record {
+      left: 100px; /* This is assuming you want it to slide from left-to-right */
+    }
+  </style>
+  <header>
+    <img class="overskrift" src="medium/pplogo.svg" alt="overskrift" />
+    <h2>tagline her</h2>
+    <button class="toggle-btn">Menu</button>
+>>>>>>> 1888cb31024787bdb6915ab58510d376588d247e
     <nav>
       <div class="knap_container">
         <button data-plader="alle" class="valgt">Alle</button>
