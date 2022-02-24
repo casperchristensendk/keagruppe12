@@ -48,14 +48,6 @@ p {
   align-items: stretch;
 }
 
-/* Indsat Casper her */
-
-/* #casper_section text {
-  width: 100%;
-  height: auto;
-  display: block;
-} */
-
 body {
   background-color: #f2f2f2;
 }
@@ -76,7 +68,7 @@ header {
   height: auto;
   display: block;
   font-family: "Didact Gothic";
-  font-size: clamp(0.5 rem, 2.5vw, 2rem);
+  font-size: 2rem;
   /* text-align: left; */
 }
 .logo {
@@ -96,11 +88,6 @@ ul {
   list-style: none;
 }
 
-/* .logo a {
-  font-size: 5rem;
-  font-weight: 700;
-  color: white;
-} */
 footer {
   text-align: center;
   color: white;
@@ -108,7 +95,7 @@ footer {
   font-size: small;
   background-color: #8c8c8c;
 }
-/* KOPIERET FRA DANNI HER  */
+
 /* header */
 .banner {
   background: #5000ca22;
@@ -156,19 +143,6 @@ nav ul {
   flex-flow: column;
 }
 
-/* KOPIERET FRA DANNI SLUT    */
-
-/* #second_section img {
-    background-image: white;
-  } */
-/* @media (max-width: 700px) {
-    h1 {
-      font-size: 8rem;
-    }
-  } */
-
-/* Forside Slideshow her */
-
 * {
   box-sizing: border-box;
 }
@@ -181,32 +155,6 @@ body {
 }
 img {
   vertical-align: middle;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.4;
-  }
-  to {
-    opacity: 1;
-  }
 }
 
 /* On smaller screens, decrease text size */
@@ -226,22 +174,21 @@ img {
   transform: translate(-50%, -50%);
 }
 button {
-  background-color: white;
+  float: left;
   color: black;
-  padding: 16px 32px;
   text-align: center;
+  padding: 12px;
   text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-  border: 2px solid #8c8c8c;
-  /* transition-duration: 0.4s; */
+  font-size: 18px;
+  line-height: 25px;
+  border: solid black 2px;
+  margin: 8px;
+  font-family: "Didact Gothic", sans-serif;
 }
 
 button:hover {
-  background-color: #8c8c8c;
+  background-color: black;
+  color: white;
 }
 
 button:focus {
@@ -284,7 +231,7 @@ button:focus {
 /*inputfelternes grå font, og en tyk border*/
 .form_felt input {
   border: black 2px solid;
-  padding: 5px;
+  padding: 10px;
 
   font-family: "Didact Gothic", sans-serif;
   font-weight: 300;
@@ -294,33 +241,23 @@ button:focus {
 .contact button {
   grid-column: 2/5;
   margin-top: 10px;
-  background: white;
-  border: 1px solid black;
-  padding: 10px;
-
-  font-family: "Didact Gothic", sans-serif;
-  font-weight: 600;
-  font-style: normal;
-  font-size: 1.3rem;
+  float: left;
   color: black;
+  text-align: center;
+  padding: 10px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border: solid black 2px;
+  margin: 8px;
+  font-family: "Didact Gothic", sans-serif;
 }
 button:hover {
-  background: #8c8c8c;
+  background-color: black;
   color: white;
   border: none;
 }
 
-/*media query*/
-/* @media (min-width: 600px) { */
-/*først i web skal vi bruge grid*/
-/* .section_grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 15px;
-    margin-bottom: 20px;
-  } */
-
-/*formular layout*/
 .contact {
   grid-column: 2/3;
   display: grid;
@@ -335,7 +272,7 @@ button:hover {
   font-family: "Didact Gothic", sans-serif;
   font-weight: 600;
   font-style: normal;
-
+  gap: 10px;
   display: grid;
   grid-column: 2/5;
 }
@@ -347,11 +284,9 @@ button:hover {
 /*inputfelternes grå font og tykke border*/
 .form_felt input {
   border: black 2px solid;
-  padding: 5px;
+  padding: 8px;
 
   font-family: "Didact Gothic", sans-serif;
   font-weight: 300;
   font-style: normal;
 }
-
-/* } */
