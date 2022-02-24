@@ -37,7 +37,7 @@
 /* body {
   background-color: #f2f2f2;
 } */
-h1 {
+/* h1 {
   width: 100%;
   height: auto;
   display: block;
@@ -46,40 +46,33 @@ h1 {
   font-weight: bold;
   text-align: center;
   color: white;
-}
+} */
 
-.logo {
+/* .logo {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 20%;
   justify-content: left;
-}
+} */
 
-a {
-  color: black;
-  text-decoration: none;
-  font-family: "Rowdies";
-  font-size: 1rem;
-  font-weight: lighter;
-}
-ul {
+/* ul {
   list-style: none;
-}
+} */
 
-.logo a {
+/* .logo a {
   font-size: 5rem;
   font-weight: 700;
   color: white;
-}
-footer {
+} */
+/* footer {
   text-align: center;
   color: white;
   font-family: "Freehand", cursive;
   font-size: small;
   background-color: #8c8c8c;
-}
+} */
 /* KOPIERET FRA DANNI HER  */
 /* header */
-.banner {
+/* .banner {
   background: #5000ca22;
   padding: 2rem;
 }
@@ -87,17 +80,17 @@ footer {
 .banner ul {
   list-style: none;
   padding: 0;
-}
+} */
 
 /* burgermenu */
-.toggle-btn {
+/* .toggle-btn {
   display: flex;
   justify-content: center;
   color: black;
-}
+} */
 
 /* @media (max-width: 600px) { */
-.toggle-btn {
+/* .toggle-btn {
   background: transparent;
   border: none;
   display: block;
@@ -123,7 +116,7 @@ nav.shown {
 nav ul {
   display: flex;
   flex-flow: column;
-}
+} */
 
 /* KOPIERET FRA DANNI SLUT    */
 

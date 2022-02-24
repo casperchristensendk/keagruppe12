@@ -2,32 +2,32 @@
   padding: 2rem;
 } */
 
-.header-banner {
-  /* background-color: black; */
-  font-family: "Didact Gothic";
-  width: 100%;
-  /* padding: 60px 0; */
-  text-align: center;
+/* .header-banner { */
+/* background-color: black; */
+/* font-family: "Didact Gothic";
+  width: 100%; */
+/* padding: 60px 0; */
+/* text-align: center;
   background: black;
   color: white;
-}
+} */
 
-header {
+/* header {
   width: 100%;
   height: auto;
   display: block;
   font-family: "Didact Gothic";
-  font-size: clamp(0.5 rem, 2.5vw, 2rem);
-  /* text-align: left; */
-}
+  font-size: clamp(0.5 rem, 2.5vw, 2rem); */
+/* text-align: left; */
+/* } */
 
-.headercontainer {
+/* .headercontainer {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background-color: #f2f2f2;
   padding: 1rem;
-}
+} */
 
 .logosection {
   width: 50%;
@@ -116,8 +116,21 @@ header h2 {
 }
 
 .knap_container {
+  width: 100%;
   display: flex;
   justify-content: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .knap_container {
+    float: none;
+    display: block;
+    text-align: left;
+    margin: 12px;
+  }
+  .knap_container button {
+    width: 100%;
+  }
 }
 
 button {
@@ -241,7 +254,7 @@ p {
     text-align: center;
     font-size: 3rem;
   }
-  h2 {
+  /* h2 {
     margin-left: 2rem;
   }
   p {
@@ -249,7 +262,7 @@ p {
   }
   img {
     margin-left: 2rem;
-  }
+  } */
 }
 /* @media (min-width: 1000px) {
   h2 {
@@ -322,7 +335,7 @@ p {
 
 #liste {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 50px;
   margin: 20px;
 }
@@ -389,14 +402,14 @@ p {
 }
 
 /* burgermenu */
-.toggle-btn {
+/* .toggle-btn {
   display: flex;
   justify-content: center;
   color: black;
-}
+} */
 
 /* @media (max-width: 600px) { */
-.toggle-btn {
+/* .toggle-btn {
   background: transparent;
   border: none;
   display: block;
@@ -404,7 +417,7 @@ p {
   min-height: 44px;
   font-size: 1.1rem;
   cursor: pointer;
-}
+} */
 
 .headercontainer-nav {
   display: none;
@@ -442,4 +455,9 @@ footer {
   font-family: "Freehand", cursive;
   font-size: small;
   background-color: #8c8c8c;
+}
+.pris {
+  font-family: Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: larger;
 }
